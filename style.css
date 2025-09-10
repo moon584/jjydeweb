@@ -32,6 +32,10 @@ body {
 .subtitle{ color:var(--text-dim); margin-top:-8px; }
 .card{ background:var(--card-bg); border:1px solid var(--border); border-radius:16px; padding:28px; box-shadow:0 6px 18px rgba(0,0,0,.15); max-width:860px; width:100%; }
 
+/* 滚动动画 */
+[data-reveal]{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+[data-reveal].visible{ opacity:1; transform:none; }
+
 /* 时间线与标签 */
 .timeline{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
 .timeline li{ border-left:3px solid var(--accent); padding:6px 12px; text-align:left; background:rgba(144,202,249,.08); border-radius:8px; }
@@ -43,6 +47,13 @@ body {
 .image-card{ background:var(--card-bg); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.12); }
 .image-card img{ display:block; inline-size:100%; block-size:auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .image-card figcaption{ padding:8px 10px; color:var(--text-dim); font-size:.95rem; }
+
+/* 图片预览 Lightbox */
+.lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.8); display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; padding:16px; z-index:100; }
+.lightbox[hidden]{ display:none; }
+.lightbox img{ max-width:90%; max-height:80vh; border-radius:8px; }
+.lightbox__close{ position:absolute; top:16px; right:16px; background:rgba(0,0,0,.5); border:none; color:#fff; font-size:2rem; line-height:1; padding:4px 12px; border-radius:6px; cursor:pointer; }
+.lightbox p{ color:#fff; }
 
 /* CTA 与返回顶部 */
 .cta-row{ display:flex; gap:12px; justify-content:center; margin-top:16px; }

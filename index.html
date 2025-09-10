@@ -55,7 +55,7 @@
 
   <main id="main">
     <!-- 首页 -->
-    <section id="home" class="section hero" aria-labelledby="hero-title">
+    <section id="home" class="section hero" aria-labelledby="hero-title" data-reveal>
       <h1 id="hero-title">鞠婧祎</h1>
       <p class="subtitle">歌手 · 演员 · 偶像</p>
       <div class="cta-row">
@@ -65,7 +65,7 @@
     </section>
 
     <!-- 个人经历 -->
-    <section id="about" class="section" aria-labelledby="about-title">
+    <section id="about" class="section" aria-labelledby="about-title" data-reveal>
       <div class="card">
         <h2 id="about-title">个人经历</h2>
         <ul class="timeline">
@@ -78,7 +78,7 @@
     </section>
 
     <!-- 影视作品 -->
-    <section id="works" class="section" aria-labelledby="works-title">
+    <section id="works" class="section" aria-labelledby="works-title" data-reveal>
       <div class="card">
         <h2 id="works-title">代表作品</h2>
         <div class="chips" role="list">
@@ -95,22 +95,22 @@
     </section>
 
     <!-- 相册：图片懒加载 -->
-    <section id="gallery" class="section" aria-labelledby="gallery-title">
+    <section id="gallery" class="section" aria-labelledby="gallery-title" data-reveal>
       <h2 id="gallery-title">精彩瞬间</h2>
       <div class="gallery" data-lazy-grid>
-        <figure class="image-card">
+        <figure class="image-card" data-reveal>
           <img loading="lazy" data-src="/images/p1.jpg" alt="舞台演出照片" width="800" height="600" />
           <figcaption>舞台演出</figcaption>
         </figure>
-        <figure class="image-card">
+        <figure class="image-card" data-reveal>
           <img loading="lazy" data-src="/images/p2.jpg" alt="电视剧角色剧照" width="800" height="600" />
           <figcaption>剧照</figcaption>
         </figure>
-        <figure class="image-card">
+        <figure class="image-card" data-reveal>
           <img loading="lazy" data-src="/images/p3.jpg" alt="活动红毯照片" width="800" height="600" />
           <figcaption>红毯</figcaption>
         </figure>
-        <figure class="image-card">
+        <figure class="image-card" data-reveal>
           <img loading="lazy" data-src="/images/p4.jpg" alt="日常写真" width="800" height="600" />
           <figcaption>写真</figcaption>
         </figure>
@@ -123,6 +123,13 @@
   </footer>
 
   <button id="backToTop" class="back-to-top" aria-label="回到顶部">↑</button>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox__close" aria-label="关闭">×</button>
+    <img id="lightbox-img" alt="" />
+    <p id="lightbox-caption"></p>
+  </div>
+
   <script src="script.js" defer></script>
 </body>
 </html>
