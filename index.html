@@ -1,63 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鞠婧祎个人主页</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>鞠婧祎个人主页｜作品与相册</title>
+  <meta name="description" content="鞠婧祎个人主页：生平经历、代表影视与音乐作品、高清图片集与动态。" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="theme-color" content="#0d47a1" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="鞠婧祎个人主页｜作品与相册" />
+  <meta property="og:description" content="生平经历、代表作、图片与动态。" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="/og-cover.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="/fonts/NotoSansSC-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "鞠婧祎",
+    "jobTitle": "歌手、演员",
+    "url": "https://example.com/",
+    "image": "https://example.com/og-cover.jpg",
+    "sameAs": [
+      "https://weibo.com/",
+      "https://www.instagram.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav>
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#about">个人经历</a></li>
-            <li><a href="#works">影视作品</a></li>
-            <li><a href="#gallery">图片集</a></li>
-        </ul>
-    </nav>
+  <!-- 跳过导航 -->
+  <a class="skip-link" href="#main">跳到主要内容</a>
 
+  <!-- 顶部导航 -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="主导航">
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">菜单</button>
+      <ul id="nav-menu" class="nav__list">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#about">个人经历</a></li>
+        <li><a href="#works">影视作品</a></li>
+        <li><a href="#gallery">图片集</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
     <!-- 首页 -->
-    <section id="home" class="hero">
-        <h1>鞠婧祎</h1>
-        <div class="card">
-            <p>歌手 | 演员 | 偶像</p>
-        </div>
+    <section id="home" class="section hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">鞠婧祎</h1>
+      <p class="subtitle">歌手 · 演员 · 偶像</p>
+      <div class="cta-row">
+        <a class="btn" href="#works">查看代表作</a>
+        <a class="btn btn--ghost" href="#gallery">浏览相册</a>
+      </div>
     </section>
 
     <!-- 个人经历 -->
-    <section id="about">
-        <div class="card">
-            <h2>个人经历</h2>
-            <p>2013年：以SNH48成员身份出道</p>
-            <p>2017年：首次单飞发展</p>
-            <p>2018年：参演首部电视剧《芸汐传》</p>
-            <p>2020年：获得东方风云榜年度全能艺人奖</p>
-        </div>
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="card">
+        <h2 id="about-title">个人经历</h2>
+        <ul class="timeline">
+          <li><time datetime="2013">2013</time> 以 SNH48 成员身份出道</li>
+          <li><time datetime="2017">2017</time> 个人发展</li>
+          <li><time datetime="2018">2018</time> 参演《芸汐传》</li>
+          <li><time datetime="2020">2020</time> 获东方风云榜年度全能艺人奖</li>
+        </ul>
+      </div>
     </section>
 
     <!-- 影视作品 -->
-    <section id="works">
-        <div class="card">
-            <h2>代表作品</h2>
-            <p>电视剧：《芸汐传》《新白娘子传奇》《漂亮书生》</p>
-            <p>音乐：《恋爱告急》《过去完成时》《冬日》</p>
-            <p>综艺：《国风美少年》《我要这样生活》</p>
+    <section id="works" class="section" aria-labelledby="works-title">
+      <div class="card">
+        <h2 id="works-title">代表作品</h2>
+        <div class="chips" role="list">
+          <span role="listitem" class="chip">《芸汐传》</span>
+          <span role="listitem" class="chip">《新白娘子传奇》</span>
+          <span role="listitem" class="chip">《漂亮书生》</span>
         </div>
+        <div class="chips" role="list">
+          <span role="listitem" class="chip">《恋爱告急》</span>
+          <span role="listitem" class="chip">《过去完成时》</span>
+          <span role="listitem" class="chip">《冬日》</span>
+        </div>
+      </div>
     </section>
 
-    <!-- 图片区 -->
-    <section id="gallery">
-        <h2>精彩瞬间</h2>
-        <div class="gallery">
-            <!-- 插入图片位置 -->
-            <div class="image-placeholder">图片1</div>
-            <div class="image-placeholder">图片2</div>
-            <div class="image-placeholder">图片3</div>
-            <div class="image-placeholder">图片4</div>
-        </div>
+    <!-- 相册：图片懒加载 -->
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">精彩瞬间</h2>
+      <div class="gallery" data-lazy-grid>
+        <figure class="image-card">
+          <img loading="lazy" data-src="/images/p1.jpg" alt="舞台演出照片" width="800" height="600" />
+          <figcaption>舞台演出</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img loading="lazy" data-src="/images/p2.jpg" alt="电视剧角色剧照" width="800" height="600" />
+          <figcaption>剧照</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img loading="lazy" data-src="/images/p3.jpg" alt="活动红毯照片" width="800" height="600" />
+          <figcaption>红毯</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img loading="lazy" data-src="/images/p4.jpg" alt="日常写真" width="800" height="600" />
+          <figcaption>写真</figcaption>
+        </figure>
+      </div>
     </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Fan Project · 非官方站点</small>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="回到顶部">↑</button>
+  <script src="script.js" defer></script>
 </body>
 </html>
