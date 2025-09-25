@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>鞠婧祎个人主页｜作品与相册</title>
   <meta name="description" content="鞠婧祎个人主页：生平经历、代表影视与音乐作品、高清图片集与动态。" />
   <link rel="canonical" href="https://example.com/" />
@@ -94,26 +94,25 @@
       </div>
     </section>
 
-    <!-- 相册：图片懒加载 -->
+    <!-- 相册：图片轮播 -->
     <section id="gallery" class="section" aria-labelledby="gallery-title" data-reveal>
       <h2 id="gallery-title">精彩瞬间</h2>
-      <div class="gallery" data-lazy-grid>
-        <figure class="image-card" data-reveal>
-          <img loading="lazy" data-src="img\com.xingin.xhs_20250925174526.png" alt="舞台演出照片" width="800" height="600" />
-          <figcaption>舞台演出</figcaption>
-        </figure>
-        <figure class="image-card" data-reveal>
-          <img loading="lazy" data-src="img\com.xingin.xhs_20250925174545.png" alt="电视剧角色剧照" width="800" height="600" />
-          <figcaption>剧照</figcaption>
-        </figure>
-        <figure class="image-card" data-reveal>
-          <img loading="lazy" data-src="img\com.xingin.xhs_20250925174623.png" alt="活动红毯照片" width="800" height="600" />
-          <figcaption>红毯</figcaption>
-        </figure>
-        <figure class="image-card" data-reveal>
-          <img loading="lazy" data-src="img\com.xingin.xhs_20250925174637.png" alt="日常写真" width="800" height="600" />
-          <figcaption>写真</figcaption>
-        </figure>
+      <div class="gallery-slider-container">
+        <div class="gallery-slider" id="gallerySlider">
+          <!-- 图片将通过JavaScript自动加载 -->
+        </div>
+        
+        <!-- 加载状态提示 -->
+        <div class="gallery-loading" id="galleryLoading">
+          <p>正在加载图片...</p>
+        </div>
+        
+        <!-- 图片轮播控制按钮 -->
+        <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="上一组图片">‹</button>
+        <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="下一组图片">›</button>
+        
+        <!-- 图片轮播指示器 -->
+        <div class="gallery-indicators" id="galleryIndicators"></div>
       </div>
     </section>
   </main>
@@ -137,6 +136,8 @@
     <p id="lightbox-caption"></p>
   </div>
 
+  <!-- 自动生成的图片列表（如果存在） -->
+  <script src="auto_images.js"></script>
   <script src="script.js" defer></script>
 </body>
 </html>
