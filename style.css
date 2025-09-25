@@ -18,6 +18,14 @@ body {
   background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
   background-size: 400% 400%; animation: gradientBG 15s ease infinite;
 }
+
+/* 背景图片样式 - 添加这个类到body来使用背景图片 */
+.bg-image {
+  background: url('img/com.xingin.xhs_20250925175232_edit_85031475649432.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: none; /* 禁用渐变动画 */
+}
 @keyframes gradientBG { 0%{background-position:0 50%} 50%{background-position:100% 50%} 100%{background-position:0 50%} }
 
 /* 跳过导航 */
