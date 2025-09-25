@@ -36,7 +36,7 @@
   }
   </script>
 </head>
-<body class="bg-image">
+<body class="bg-slideshow">
   <!-- 跳过导航 -->
   <a class="skip-link" href="#main">跳到主要内容</a>
 
@@ -123,6 +123,13 @@
   </footer>
 
   <button id="backToTop" class="back-to-top" aria-label="回到顶部">↑</button>
+
+  <!-- 背景切换按钮 -->
+  <div class="bg-controls">
+    <button id="prevBg" class="bg-btn bg-btn--prev" aria-label="上一张背景">‹</button>
+    <button id="nextBg" class="bg-btn bg-btn--next" aria-label="下一张背景">›</button>
+    <div class="bg-indicators" id="bgIndicators"></div>
+  </div>
 
   <div id="lightbox" class="lightbox" hidden>
     <button class="lightbox__close" aria-label="关闭">×</button>
