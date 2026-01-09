@@ -2,59 +2,24 @@
 
 一个纯前端的静态个人主页，展示鞠婧祎的生平经历、代表影视与音乐作品，以及图片相册。包含响应式布局、背景轮播、图片画廊、懒加载、Lightbox 预览、键盘/触摸操作、基础 SEO 与结构化数据等特性。粉丝自制，非官方站点。
 
-- 在线预览（GitHub Pages）：https://moon584.github.io/jjydeweb/（若尚未开启，请参考下方“部署”）
+- 在线预览（GitHub Pages）：https://moon584.github.io/jjydeweb/
 - 仓库地址：https://github.com/moon584/jjydeweb
 - 默认分支：main
 - 主要语言占比（约）：JavaScript 55.3% · CSS 32.3% · HTML 12.4%
 
 ---
 
-## 功能亮点（含预览图占位）
+## 功能亮点
 
-> 说明：以下为“预览图占位”，添加截图后，取消注释即可显示图片。
-> 建议将图片统一放在 docs/ 目录（需自行创建），文件名示例已给出。
-
-### 1) 首页与导航（响应式 + 平滑滚动）
-- 描述：顶部导航、移动端菜单、当前分区高亮、平滑滚动。
-- 占位：添加截图到 `docs/preview-home.png`
-  
-<!-- ![预览-首页与导航](docs/preview-home.png) -->
-
-### 2) 滚动动效（内容显隐）
-- 描述：元素进入视口时渐显（`data-reveal`）。
-- 占位：添加截图到 `docs/preview-reveal.png`
-  
-<!-- ![预览-滚动动效](docs/preview-reveal.png) -->
-
-### 3) 背景轮播（含指示器/自动播放/触摸/键盘）
+### 1) 背景轮播（含指示器/自动播放/触摸/键盘）
 - 描述：全屏背景轮播，支持左右切换、自动播放、指示器点击、键盘方向键、触摸滑动、悬停暂停。
-- 占位：添加截图到 `docs/preview-background.png`
   
 <!-- ![预览-背景轮播](docs/preview-background.png) -->
 
-### 4) 图片画廊轮播（懒加载 + 多列自适应）
+### 2) 图片画廊轮播（懒加载 + 多列自适应）
 - 描述：根据屏幕宽度 1/2/3 列显示，指示器跳转，左右切换。
-- 占位：添加截图到 `docs/preview-gallery.png`
   
 <!-- ![预览-图片画廊](docs/preview-gallery.png) -->
-
-### 5) Lightbox 大图预览
-- 描述：点击画廊图片打开大图与标题说明，ESC 关闭、点击遮罩关闭。
-- 占位：添加截图到 `docs/preview-lightbox.png`
-  
-<!-- ![预览-Lightbox](docs/preview-lightbox.png) -->
-
-### 6) 返回顶部按钮
-- 描述：滚动到一定距离后显示，一键回到顶部。
-- 占位：添加截图到 `docs/preview-backtotop.png`
-  
-<!-- ![预览-返回顶部](docs/preview-backtotop.png) -->
-
-### 7) SEO 与结构化数据
-- 描述：`<title>`、`<meta name="description">`、Open Graph、Twitter Card、JSON-LD（Person）。
-- 占位：添加截图到 `docs/preview-seo.png`
-  
-<!-- ![预览-SEO](docs/preview-seo.png) -->
 
 ---
 
